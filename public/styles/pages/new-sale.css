@@ -1,0 +1,43 @@
+main{
+    height: 100vh;
+    padding: 0 250px;
+}
+form{
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 0 18px;
+    gap: 20px;
+    margin: auto;
+}
+div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+div.wrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+label{
+    font-size: .8rem;
+    margin-bottom: 5px;
+}
+input{
+    height: 40px;
+    width: 100%;
+}
+button {
+    height: 50px;
+    width: 100%;
+    font-weight: 500;
+    outline: none;
+}
+button:focus{
+    border: 3px solid black;
+}

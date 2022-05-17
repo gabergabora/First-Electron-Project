@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title>Vendas</title>
+
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/pages/sales.css">
+</head>
+<body>
+    <main>
+        <a href="/" class="link-back">
+            <img src="/images/arrow_back.svg" alt="Arrow left" title="esc">
+        </a>
+        <div class="container">
+            <h1>VENDAS</h1>
+
+            <% if(typeof sales === 'string'){ %>
+                <div class="search-error">
+                    <h3> <%= sales %> </h3>
+                </div>
+            <% } else { %>
+                <% sales.slice().reverse().forEach((sale) => { %>
+                    <div class="card">
+                        <div class="title">
+                            <h2> <%= sale.cnpj %> </h2>
+                            <h3> <%= sale.created_at %> </h3>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Telefone</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-id="<%= sale.id %>">
+                                    <td>
+                                        <%= sale.name %>
+                                    </td>
+                                    <td>
+                                        <%= sale.phone %>
+                                    </td>
+                                    <td>
+                                        <%= sale.email %>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Quantidade</th>
+                                    <th>Preço</th>
+                                    <th>Vendedor</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <%= sale.product %>
+                                    </td>
+                                    <td>
+                                        <%= sale.product_quantity %>kg
+                                    </td>
+                                    <td>
+                                        R$<%= sale.product_price %>
+                                    </td>
+                                    <td>
+                                        <%= sale.seller %>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span>
+                    </div>
+                <%})} %>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "name": "FirstElectronProject",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "repository": "git@github.com:ViniciusFtb/TertuplasProject.git",
+  "author": "ViniciusWSL-W11 <viniciusfontebasso.22@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^18.0.1",
+    "electron-builder": "^23.0.3",
+    "ffmpeg-static": "^5.0.0",
+    "node-rtsp-stream": "^0.0.9",
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "node src/server.js",
+    "init-db": "node src/db/init.js",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "ejs-electron": "^2.1.1",
+    "express": "^4.17.3",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.6"
+  },
+  "build": {
+    "appId": "ElectronProject"
+  }
+}

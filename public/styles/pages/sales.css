@@ -1,0 +1,58 @@
+main{
+    padding: 0 9px;
+    display: flex;
+    justify-content: center;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    padding: 5px;
+    text-align: left;
+    line-height: 1.5rem;
+    background-color: var(--primary);
+    color: white;
+}
+td{
+    padding: 5px;
+    border: 0;
+    background-color: white;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 0 10px 10px 10px;
+}
+.container h1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+}
+.container .card{
+    margin-top: 30px;
+}
+.container .card .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+span{
+    display: block;
+    margin-top: 30px;
+    height: 2px;
+    background: var(--primary);
+    width: 100%;
+}
+.search-error{
+    width: 100%;
+    margin-top: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
